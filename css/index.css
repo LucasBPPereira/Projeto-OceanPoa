@@ -1,0 +1,1833 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+/* font-family: 'Space Grotesk', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap');
+/* font-family: 'Inter', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --font-grotesk: 'Space Grotesk', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+    --font-size-title: 64px;
+}
+
+body {
+    background-color: #EEEEEE;
+}
+
+/* Header - INCIO */
+header {
+    height: 6.25rem;
+    background-color: #f5f5f525;
+    position: relative;
+    z-index: 1;
+}
+
+.container-header {
+    height: 6.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 3.125rem;
+}
+
+.nav-social-media {
+    width: 12.5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-social-media a:nth-child(2) {
+    margin: 0 ;
+}
+
+.nav-social-media a > svg {
+    width: 2.5rem;
+    height: 2.625rem;
+}
+
+.nav-social-media a > svg path {    
+    transition: .5s ease;
+}
+
+.nav-social-media a > svg:hover path {
+    fill: #09BD97;
+}
+
+#nav-sm-mobile {
+    display: none;
+}
+
+#logo > a > img:hover {
+    animation: rotacionando 1.5s linear infinite;
+}
+
+@keyframes rotacionando {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.nav-pag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 12.5rem;
+}
+
+.nav-link a {
+    font-size: 1.25rem;
+    font-family: 'Space Grotesk';
+    color: #F5F5F5;
+    position: relative;
+    transition: all .8s ease;
+}
+
+.nav-link a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    border-bottom: 2px solid #009BA6;
+    transition: all .8s ease;
+}
+
+.nav-link a:hover::after {
+    width: 100%;
+}
+
+.nav-link a:hover {    
+    color: #009BA6;
+}
+
+#menu {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-bar {
+    display: block;
+    height: 3px;
+    width: 38px;
+    background-color: #09BD97;
+    border-radius: 3px;
+    transition: all 0.4s;
+}
+
+.menu-bar:nth-child(2) {
+    margin: 5px auto;
+}
+
+/* Header - FIM */
+
+/* Main - INICIO */
+
+/* Section Tela Inicial - INICIO */
+
+#tela-inicial {
+    background-image: url('../imagens/fundoTelaInicial.jpg');
+    background-repeat: no-repeat;
+    height: 800px;
+    margin-top: -100px;
+}
+
+.container-tela-inicial {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-tela-inicial article > p {
+    color: #F5F5F5;
+    font-family: 'Space Grotesk';
+    font-size: var(--font-size-title);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 8.75rem;
+    width: 37.5rem;
+}
+
+.button {
+    position: relative;
+    top: 40px;
+    left: 144px;
+    background-color: #009BA6;
+    padding: 16px 40px;
+    font-size: 36px;
+    font-family: 'Inter', sans-serif;
+    color: #F5F5F5;
+    border-radius: 8px;
+    z-index: 0;
+    transition: .6s ease;
+}
+
+.container-tela-inicial article > a:hover {
+    box-shadow: 2px 4px 5px #009ba633;
+}
+
+.tenis-amostra {
+    width: 43.75rem;
+    position: relative;
+    right: 6.25rem;
+}
+
+.tenis-amostra img {
+    width: 43.75rem;
+}
+
+.tenis-amostra-mobile {
+    display: none;
+}
+
+/* Section Tela Inicial - FIM */
+
+/* Section Destaques - INICIO */
+
+#destaques {
+    height: 58rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.tenis-do-mes {
+    position: absolute;
+    top: 50px;
+    left: -80px;
+    z-index: -1;
+}
+
+.tenis-do-mes h3 {
+    font-family: var(--font-inter);
+    font-size: 250px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.tenis-do-mes h3:nth-of-type(1) {
+    color: rgba(0, 0, 0, 0.09);
+}
+.tenis-do-mes h3:nth-of-type(2) {
+    color: rgba(0, 0, 0, 0.06);
+}
+.tenis-do-mes h3:nth-of-type(3) {
+    color: rgba(0, 0, 0, 0.03);
+}
+
+.container-destaque {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    padding-top: 1.25rem;
+}
+
+.container-destaque h2 {
+    font: var(--font-size-title) var(--font-grotesk);
+    text-transform: uppercase;
+    color: #009BA6;
+    text-align: center;
+}
+
+.container-destaque h2::selection {
+    background-color: #009BA6;
+    color: #F5F5F5;
+}
+
+.container-destaque > p {
+    color: #009BA6;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: var(--font-inter);
+    padding-bottom: 60px;
+}
+
+.container-destaque > p::selection {
+    background-color: #009BA6;
+    color: #F5F5F5;
+}
+
+.card-tenis {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 75rem;
+}
+
+.card-tenis-mobile {
+    display: none;
+}
+
+.card-tenis-mobile .card-tenis-item-mobile {
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    background: #A288A6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.card-tenis-mobile .card-tenis-item-mobile p {
+    color: #F5F5F5;
+    font-family: var(--font-inter);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.35px;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    bottom: 80px;
+}
+.card-tenis-mobile .card-tenis-item-mobile:nth-child(1) p{
+    width: 220px;
+}
+
+.card-tenis-mobile .card-tenis-item-mobile strong {
+    color: #450250;
+    font-family: var(--font-inter);
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card-tenis-mobile .card-tenis-item-mobile:nth-of-type(2) {
+    border-radius: 10px;
+    background: #09BD97;
+    box-shadow: 0px 0px 4px 5px #09BD97;
+}
+
+.card-tenis-mobile .card-tenis-item-mobile:nth-of-type(2) strong {
+    color: #11705C;
+}
+
+.card-tenis article {
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    background: #A288A6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.card-tenis article p {
+    color: #F5F5F5;
+    font-family: var(--font-inter);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.35px;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    bottom: 80px;
+}
+.card-tenis article:nth-child(1) p{
+    width: 220px;
+}
+
+.card-tenis article strong {
+    color: #450250;
+    font-family: var(--font-inter);
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card-tenis article:nth-of-type(2) {
+    border-radius: 10px;
+    background: #09BD97;
+    box-shadow: 0px 0px 4px 5px #09BD97;
+}
+
+.card-tenis article:nth-of-type(2) strong {
+    color: #11705C;
+}
+
+.btn-slides {
+    display: none;
+}
+
+.call-to-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.call-to-action p {
+    color: #A288A6;
+    font-family: var(--font-inter);
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2.7px;
+}
+
+.call-to-action p::selection {
+    background-color: #A288A6;
+    color: #F5F5F5;
+}
+
+.call-to-action p:first-child {
+    padding-top: 40px;
+}
+
+.call-to-action p > span {
+    color: #09BD97;
+}
+
+.call-to-action p > span::selection {
+    background-color: #09BD97;
+    color: #F5F5F5;
+}
+
+.call-to-action > .button {
+    left: 0;
+}
+
+/* Section Destaques - FIM */
+
+/* Section Lançamento - INICIO */
+
+#lancamento {
+    background-color: #09bd961a;
+    height: 100rem;
+}
+
+.container-lancamento {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 40px 0 40px;
+}
+
+.container-lancamento h2 {
+    font-family: var(--font-grotesk);
+    font-size: var(--font-size-title);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #A288A6;
+}
+
+.container-lancamento h2::selection {
+    background-color: #A288A6;
+    color: #f5f5f5;
+}
+
+.tenisHocks-CTA {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.title-line {
+    position: relative;
+    margin-top: 30px;
+    height: 3.75rem;
+}
+
+.line-before {
+    position: absolute;
+    top: 30px;
+    left: -58px;
+    height: 2px;
+    width: 56px;
+    background: #009BA6;
+}
+
+.title-line > p {
+    font-family: var(--font-grotesk);
+    font-size: 38px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #009BA6;
+}
+
+.line-after {
+    position: absolute;
+    top: 30px;
+    right: -58px;
+    height: 2px;
+    width: 56px;
+    background: #009BA6;
+}
+
+#img-prim-lanca {
+    position: relative;
+    top: -60px;
+}
+
+#view-tenis-mobile {
+    display: none;
+}
+
+.tenisHocks-CTA > p {
+    text-align: center;
+    font-family: var(--font-grotesk);
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 0 60px;
+}
+
+.garanta-CTA {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 220px;
+}
+
+.garanta-CTA > p:nth-of-type(1) {
+    color: #F5F5F5;
+    font-family: var(--font-grotesk);
+    font-size: 50px;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: rgb(17, 112, 91);
+    padding: 4px 20px;
+    border-radius: 4px;
+    transition: all .8s ease;
+}
+
+.garanta-CTA > p:nth-of-type(2) {
+    font-size: 36px;
+    color: #009BA6;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: var(--font-grotesk);
+}
+
+.garanta-CTA > p:nth-of-type(2) span {
+    color: #000;
+}
+
+.button-roxo {
+    border-radius: 6px;
+    background: #A288A6;
+    margin-top: 1.25rem;
+    padding: 15px 200px;
+    font-family: var(--font-grotesk);
+    font-size: 36px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #FCFCFC;
+}
+
+.abaixo-bt-rx {
+    position: absolute;
+    bottom: -25px;
+    color: rgba(0, 0, 0, 0.44);
+    font-family: var(--font-grotesk);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/* Section Lançamento - FIM */
+
+/* Section Qualidades - INICIO */
+
+#pontos-positivos {
+    height: 23.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qualidades {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3.125rem;
+    width: 1045px;
+}
+
+.group-qualidade {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.group-qualidade:nth-of-type(2n-1) {
+    width: 32.625rem;
+}
+
+.group-qualidade:nth-of-type(2n) {
+    width: 29.125rem;
+}
+
+.group-qualidade h3 {                         
+    font-size: 24px;
+    font-weight: 700;
+    font-family: var(--font-grotesk);
+    text-transform: uppercase; 
+    position: absolute;
+}
+
+.group-qualidade:nth-of-type(1) h3 {
+    top: 22px;
+    left: 120px; 
+}
+
+.group-qualidade:nth-of-type(2) h3 {
+    top: 22px;
+    left: 100px; 
+}
+
+.group-qualidade:nth-of-type(3) h3 {
+    top: 22px;
+    left: 140px; 
+}
+
+.group-qualidade span {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: var(--font-grotesk);
+    text-transform: uppercase;
+}
+
+/* Section Qualidades - FIM */
+
+/* Section Comentários - INICIO */
+
+#comentarios-clientes {
+    background-color: #A288A6;
+    height: 67.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 3.75rem;
+}
+
+#comentarios-clientes h2 {
+    font-family: var(--font-grotesk);
+    font-size: var(--font-size-title);
+    font-weight: 300;
+    color: #fcfcfc;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    width: 54.0625rem;
+}
+
+#comentarios-clientes h2::selection {
+    background-color: #F5F5F5;
+    color: #A288A6;
+}
+
+#comentarios-clientes > p {
+    font-family: var(--font-inter);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #fcfcfc;
+}
+
+#comentarios-clientes > p::selection {
+    background-color: #F5F5F5;
+    color: #A288A6;
+}
+
+.container-comentarios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px 10px;
+}
+
+.card-comentarios {
+    background-color: #FCFCFC;
+    border-radius: 6px;
+    box-shadow: 0px 24px 17px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    height: 300px;
+    transition: all .8s ease;
+    position: relative;
+    transform: scale(0.9);
+}
+
+.card-comentarios img {
+    width: 88px;
+    height: 88px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.card-comentarios strong {
+    position: absolute;
+    top: 56px;
+    left: 28px;
+    font-family: var(--font-inter);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.card-comentarios span {
+    position: absolute;
+    top: 90px;
+    left: 28px;
+    font-family: var(--font-inter);
+    font-size: 14px;
+    font-weight: 600;
+    color: #BEBEBE;
+}
+
+.card-comentarios p {
+    position: absolute;
+    top: 156px;
+    left: 26px;
+    font-family: var(--font-inter);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+ /* Section Comentários - FIM */
+
+/* Section Feedback - INICIO */
+
+#feedback {
+    padding: 37px 200px 74px 200px;
+}
+
+.container-feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 680px;
+    width: 940px;
+}
+
+.container-feedback h2 {
+    width: 940px;
+    color: #09BD97;
+    font-family: var(--font-grotesk);
+    font-size: 56px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.container-feedback h2::selection {
+    background-color: #09BD97;
+    color: #F5F5F5;
+}
+
+.container-feedback h2:nth-of-type(2) {
+    margin-top: 3.25rem;
+}
+
+.container-feedback h3 {
+    color: #BEBEBE;
+    font-family: var(--font-grotesk);
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.container-feedback a {
+    width: 58.125rem;
+    padding: 20px 280px;
+    border-radius: 8px;
+    background: #09BD97;
+    box-shadow: 0px 0px 0px 0px rgba(9, 189, 151, 0.10), 3px 7px 17px 0px rgba(9, 189, 151, 0.10), 14px 27px 30px 0px rgba(9, 189, 151, 0.09), 31px 61px 41px 0px rgba(9, 189, 151, 0.05), 55px 109px 49px 0px rgba(9, 189, 151, 0.01), 85px 170px 53px 0px rgba(9, 189, 151, 0.00);
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--font-grotesk);
+    font-size: 32px;
+    font-weight: 500;
+    color: #F5F5F5;
+}
+
+#link-prop-mobile {
+    display: none;
+    padding: 20px 160px;
+}
+
+#link-prop-desktop {
+    padding: 20px 160px;
+}
+
+/* Section Feedback - FIM */
+
+/* Main - FIM */
+
+/* Footer - INICIO */
+
+footer {
+    padding: 0 200px;
+    position: relative;
+}
+
+footer > svg {
+    position: absolute;
+    top: 0;
+}
+
+.container-footer {
+    width: 940px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.footer-sm {
+    height: 11.25rem;
+    width: 10.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sm-tiktok, .sm-instagram, .sm-whatsapp {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-sm p {
+    font-family: var(--font-grotesk);
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.footer-sm p a {
+    color: #A288A6;
+}
+
+.logo-footer {
+    position: relative;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-footer img {
+    width: 318px;
+    height: 250px;
+}
+
+.logo-footer p {
+    position: absolute;
+    bottom: 17px;
+    width: 390px;
+    text-align: center;
+    color: #A288A6;
+    font-family: var(--font-grotesk);
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.logo-footer p::selection {
+    background-color: #A288A6;
+    color: #F5F5F5;
+}
+
+.ellipse {
+    width: 5.625rem;
+    height: 5.625rem;
+    border-radius: 100%;
+    border: 2px solid #09BD97;
+    position: relative;
+    transition: .4s ease;
+}
+
+.ellipse svg {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    transition: 1s ease;
+}
+
+.ellipse:hover {
+    cursor: pointer;
+    border-color: #A288A6;
+}
+
+.ellipse:hover svg path {
+    fill: #A288A6;
+}
+
+#creator {
+    position: absolute;
+    top: 190px;
+    right: 0;
+    transform: scale(0.8);
+}
+
+#creator span {
+    display: none;
+}
+
+#creator-mobile {
+    display: none;
+}
+
+/* Footer - FIM */
+
+/* Responsivo - INICIO */
+
+@media screen and (max-width:1180px) {
+/* Section Tela Inicial - INICIO */
+    .tenis-amostra {
+        transform: scale(0.6);
+        transition: all 1s ease;
+        right: 0.25rem;
+    }
+
+    .container-tela-inicial article {
+        position: relative;
+        left: 160px;
+    }
+
+    .container-tela-inicial article > p {
+        font-size: 48px;
+        margin-left: 0;
+        width: 21.5rem;
+    }
+
+    .button:nth-of-type(1) {
+        padding: 16px 15px;
+        font-size: 23px;
+        left: auto;
+    }
+
+/* Section Tela Inicial - FIM */
+
+/* Section Destaques - INICIO */
+
+    #destaques {
+        height: 80rem;
+    }
+
+    .tenis-do-mes {
+        display: none;
+    }
+
+    .card-tenis {
+        width: 34rem;
+        gap: 20px 0;
+    }
+
+    .call-to-action p {
+        transition: 1s ease;
+    }
+
+/* Section Destaques - FIM */
+
+/* Section Lançamento - INICIO */
+
+    #lancamento {
+        height: 110rem;
+    }
+
+    .container-lancamento > h2 {
+        text-align: center;
+    }
+
+    .button-roxo {
+        padding: 15px 120px;
+        transition: 1s ease;
+    }
+
+    .abaixo-bt-rx {
+        bottom: -30px;
+    }
+
+/* Section Lançamento - FIM */
+
+/* Section Pontos Positivos - INICIO */
+
+    #pontos-positivos {
+        height: 30.75rem;
+    }
+
+/* Section Pontos Positivos - FIM */
+
+/* Section Comentários - INICIO */
+
+    #comentarios-clientes {
+        height: 80.5rem;
+    }
+
+    #comentarios-clientes > h2 {
+        font-size: 48px;
+        width: auto;
+    }
+
+/* Section Comentários - FIM */
+
+/* Section Feedback - INICIO */
+
+    #feedback {
+        padding: 37px 20px 74px 40px;
+    }
+
+    .container-feedback {
+        width: auto;
+        transition: all 1s ease;
+    }
+
+    .container-feedback > h2 {
+        width: 650px;
+        transition: 1s ease;
+    }
+
+    .container-feedback > h3 {
+        width: 708px;
+        font-size: 24px;
+        transition: 1s ease;
+    }
+    .container-feedback a {
+        width: 43.75rem;
+        padding: 20px 160px;
+    }
+
+    #link-prop-desktop {
+        padding: 20px 40px;
+        width: 700px;
+    }
+
+/* Section Feedback - FIM */
+
+/* Footer - INICIO */
+
+    footer {
+        padding: 0 0 0 40px;
+    }
+
+    footer > svg {
+        width: 708px;
+    }
+
+    .container-footer {
+        justify-content: normal;
+        width: auto;
+    }
+
+    .logo-footer p {
+        width: 360px;
+        bottom: 34px;
+        font-size: 14px;
+    }
+
+    .ellipse {
+        position: relative;
+        right: -40px;
+        top: -40px;
+    }
+
+    #creator {
+        position: relative;
+        top: 60px;
+        right: 50px;
+    }
+
+/* Footer - FIM */
+}
+
+@media screen  and (max-width: 768px) {
+
+    .nav-social-media {
+        position: fixed;
+        right: -200%;
+        transition: all .8s ease;
+        top: 230px;
+    }
+
+    .nav-social-media.ativo {
+        right: 0;
+        top: 210px;
+        z-index: 2;
+    }
+
+    #nav-sm-mobile {
+        display: block;
+        position: absolute;
+        width: 215px;
+        top: -42px;
+        right: 20px;
+        font-family: var(--font-grotesk);
+        font-size: 32px;
+        font-weight: 600;
+        color: #09BD97;
+    }
+
+    .nav-social-media.ativo a:nth-child(2) {
+        margin: 0;
+    }
+
+    #logo {
+        position: relative;
+        left: -46px;
+    }
+
+    .nav-pag {
+        position: fixed;
+        right: -200%;
+        top: 80px;
+        transition: all .8s ease;
+        width: 100%;
+        height: 12.5rem;
+        padding-top: 10px;
+        gap: 10px;
+        background: #11705b;
+        flex-direction: column;
+        align-items: end;
+        justify-content: start;
+        z-index: 1;
+    }
+
+    .nav-pag.ativo {
+        top: 80px;
+        right: 0;
+    }
+
+    .nav-pag.ativo .nav-link {
+        margin-right: 1.25rem;
+    }
+
+    .nav-pag.ativo .nav-link a {
+        font-size: 22px;
+    }
+
+    .nav-link a::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        border-bottom: 2px solid #009BA6;
+        transition: all .8s ease;
+    }
+
+    .nav-link a:hover {
+        color: #F5F5F5;
+    }
+
+    #menu {
+        display: block;
+        position: relative;
+        right: -70px;
+    }
+
+    #menu.ativo .menu-bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    #menu.ativo .menu-bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #menu.ativo .menu-bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .tenisHocks-CTA {
+        padding: 0;
+    }
+}
+@media screen and (min-width: 416px) and (max-width: 714px) {
+
+    /* Section Tela Inicial - INICIO */
+
+    .container-tela-inicial {
+        flex-direction: column;
+    }
+
+    .container-tela-inicial article {
+        margin-top: 7.375rem;
+        left: auto;
+    }    
+
+    .tenis-amostra {
+        display: none;
+    }
+
+    .tenis-amostra-mobile {
+        display: block;
+    }
+
+    .container-tela-inicial > article > .button:nth-of-type(1) {
+        left: 0;
+        margin: 0 auto;
+        top: 360px;
+    }
+
+    /* Section Tela Inicial - FIM */
+
+    /* Section Destaques - INICIO */
+
+    .call-to-action p {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    /* Section Destaques - FIM */
+
+    /* Section lancamentos - INICIO */
+
+    #lancamento {
+        height: 90rem;
+    }
+
+    .container-lancamento > h2 {
+        font-size: 48px;
+    }
+
+    .title-line > p {
+        font-size: 22px;
+    }
+
+    .line-before {
+        top: 14px;
+        left: -27px;
+        width: 24px;
+    }
+
+    .line-after {
+        top: 14px;
+        right: -28px;
+        width: 24px;
+    }
+
+    .tenisHocks-CTA {
+        height: 1150px;
+        justify-content: space-around;
+    }
+
+    #img-prim-lanca, #view-tenis-desktop {
+        display: none;
+    }
+
+    #view-tenis-mobile {
+        display: block;
+    }
+
+    .garanta-CTA {
+        margin-top: 30px;
+    }
+
+    .garanta-CTA > p:nth-of-type(1) {
+        font-size: 32px;
+    }
+
+    .garanta-CTA > p:nth-of-type(2) {
+        font-size: 26px;
+    }
+
+    .button-roxo {
+        padding: 15px 32px;
+        font-size: 24px;
+    }
+
+    .abaixo-bt-rx {
+        bottom: -16px;
+        font-size: 20px;
+    }
+
+    /* Section Lançamentos - FIM */
+
+    /* Section Qualidades - INICIO */
+
+    #pontos-positivos {
+        height: 40rem;
+    }
+
+    .qualidades {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        width: 25rem;
+    }
+
+    .group-qualidade {
+        flex-direction: column;
+        position: static;
+        width: 320px;
+    }
+
+    .group-qualidade:nth-of-type(2n-1) {
+        width: 100%;
+    }
+
+    .group-qualidade:nth-of-type(2n) {
+        width: 100%;
+    }
+
+    .group-qualidade h3 {
+        font-size: 22px;
+        text-align: center;
+        position: static;
+    }
+
+    .group-qualidade:nth-of-type(1) h3 {
+        width: 350px;
+    }
+
+    /* Section Qualidades -FIM */
+
+    /* Section Comentários - INICIO */
+
+    #comentarios-clientes {        
+        padding-bottom: 0.75rem;
+    }
+
+    #comentarios-clientes > p {
+        width: 18.75rem;
+    }
+
+    .container-comentarios {
+        flex-direction: column;
+    }
+
+    .card-comentarios:nth-of-type(4), .card-comentarios:nth-of-type(5), .card-comentarios:nth-of-type(6) {
+        display: none;
+    }
+
+    /* Section Comentários - FIM */
+
+    /* Section Feedback - INICIO */
+
+    .container-feedback h2 {
+        font-size: 32px;
+    }
+
+    .container-feedback > h3 {
+        width: 495px;
+    }
+
+    .container-feedback a {
+        width: 23.75rem;
+        padding: 20px 0px;
+        transition: 1s ease;
+    }
+
+    #link-prop-desktop {
+        display: none;
+    }
+
+    #link-prop-mobile {
+        display: block;
+        padding: 20px 20px;
+    }
+
+    /* Section Feedback - FIM */
+
+    /* Footer - INICIO */
+
+    footer {
+        padding: 0;
+    }
+
+    footer > svg {
+        margin-left: 30px;
+        width: 350px;
+    }
+
+    .container-footer {
+        width: 100vw;
+        flex-direction: column;
+    }
+
+    .footer-sm {
+        align-self: flex-start;
+        margin-left: 40px;
+        margin-top: 30px;
+    }
+
+    .logo-footer {
+        width: 100vw;
+    }
+    .logo-footer P {
+        width: 265px;
+    }
+
+    .ellipse {
+        transform: scale(0.8);
+        top: -392px;
+        right: -100px;
+    }
+
+    #creator {
+        display: none;
+    }
+
+    #creator-mobile {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+    }
+
+    #creator-mobile span {
+        display: inline-block;
+        font-family: var(--font-grotesk);
+        position: relative;
+        top: -18px;
+    }
+
+/* Footer  - FIM */
+
+}
+
+@media screen and (min-width: 416px) and (max-width: 530px) {
+
+
+/* Section Destaques - INICIO */
+    #destaques {
+        height: 65rem;
+    }
+
+    .card-tenis {
+        display: none;
+    }
+
+    .card-tenis-mobile {
+        display: flex;
+        gap: 0 25px;
+        transition: transform 0.3s ease-in-out;
+        position: relative;
+        left: 375px;
+        width: 76rem;
+        padding: 0 30px;
+    }
+
+/* Section Destaques - FIM */
+
+/* Section Comentarios - INICIO */    
+
+    #comentarios-clientes > h2 {
+        font-size: 42px;
+    }
+
+/* Section Comentarios - FIM */
+
+/* Section Feedback - INICIO */
+
+    .container-feedback h2:nth-of-type(2) {
+        width: 350px;
+        text-align: center;
+    }
+
+    .container-feedback h3 {
+        width: 360px;
+    }
+
+    .container-feedback a {
+        width: 21.75rem;
+        padding: 20px 0px;
+        font-size: 26px;
+    }
+
+/* Section Feedback - FIM */
+
+}
+
+@media screen and (max-width: 415px) {
+/* Header - INICIO */
+
+    header {
+        background: none;
+        height: 80px;
+    }
+
+    .container-header {
+        position: fixed;
+        z-index: 4;
+        background-color: #f5f5f525;
+        height: 80px;
+        width: 100vw;
+        transition: background-color .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .container-header.scrolled {
+        background-color: #140B24;
+    }
+
+/* Header - FIM */
+
+/* Main - INICIO */
+/* Section Tela Inicial - INICIO */
+
+    .container-tela-inicial {
+        flex-direction: column;
+    }
+
+    .container-tela-inicial article {
+        margin-top: 9.375rem;
+        left: auto;
+    }
+
+    .container-tela-inicial article p {
+        font-size: 36px;
+        width: 17.375rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .button {
+        font-size: 16px;
+    }
+
+    .container-tela-inicial > article > .button:nth-of-type(1) {
+        left: 0;
+        margin: 0 auto;
+        top: 360px;
+    }
+
+    .tenis-amostra {
+        display: none;
+    }
+
+    .tenis-amostra-mobile {
+        display: block;
+    }
+
+    /* Section Tela Inicial - FIM */
+
+    /* Section Destaques - INICIO */
+
+    #destaques {
+        height: 53rem;
+    }
+
+    .tenis-do-mes {
+        display: none;
+    }
+
+    .container-destaque > h2 {
+        font-size: 36px;
+    }
+
+    .container-destaque > p {
+        padding-top: 15px;
+    }
+
+    .card-tenis {
+        display: none;
+    }
+
+    .card-tenis-mobile {
+        display: flex;
+        gap: 0 25px;
+        transition: transform 0.3s ease-in-out;
+        position: relative;
+        left: 375px;
+        width: 76rem;
+        padding: 0 40px;
+    }
+
+    .btn-slides {
+        position: relative;        
+        display: block;
+    }
+
+    .btn-slider {
+        position: absolute;
+        top: 12px;
+        padding: 4px 12px;
+        background-color: #a288a645;
+        outline: none;
+        border: none;
+        border-radius: 8px;
+        color: #a288a6;
+    }
+
+    .btn-slider:nth-of-type(1) {
+        left: -60px;
+    }
+
+    .btn-slider:nth-of-type(2) {
+        right: -60px;
+    }
+
+    .call-to-action {
+        margin-top: 10px;
+    }
+
+    .call-to-action p {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .call-to-action p:nth-child(1) {
+        font-size: 20px;
+        width: 220px
+    }
+
+    .call-to-action p:nth-child(2) {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    /* Section Destaques - FIM */
+
+    /* Section Lançamento - INICIO */
+
+    #lancamento {
+        height: 70rem;
+    }
+
+    .container-lancamento > h2 {
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .title-line > p {
+        font-size: 22px;
+    }
+
+    .line-before {
+        top: 14px;
+        left: -27px;
+        width: 24px;
+    }
+
+    .line-after {
+        top: 14px;
+        right: -28px;
+        width: 24px;
+    }
+
+    #img-prim-lanca {
+        display: none;
+    }
+
+    #view-tenis-desktop {
+        display: none;
+    }
+
+    #view-tenis-mobile {
+        display: block;
+    }
+
+    .tenisHocks-CTA {
+        padding: 0;
+    }
+
+    .tenisHocks-CTA > p {
+        font-size: 18px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .garanta-CTA {
+        height: 8.75rem;
+    }
+
+    .garanta-CTA > p:nth-of-type(1) {
+        font-size: 26px;
+    }
+
+    .garanta-CTA > p:nth-of-type(2) {
+        font-size: 18px;
+    }
+
+    .button-roxo {
+        font-size: 18px;
+        padding: 10px 44px;
+    }
+
+    .abaixo-bt-rx {
+        font-size: 16px;
+        bottom: -18px;
+    }
+
+    /* Section Lançamento - FIM */
+
+    /* Section Qualidades - INICIO */
+
+    #pontos-positivos {
+        height: 42.75rem;
+    }
+
+    .qualidades {
+        flex-direction: column;
+        align-items: center;
+        height: 40rem;
+        gap: 40px;
+        width: 25rem;
+    }
+
+    .group-qualidade {
+        flex-direction: column;
+        position: static;
+        width: 320px;
+    }
+
+    .group-qualidade:nth-of-type(2n-1) {
+        width: 100%;
+    }
+
+    .group-qualidade:nth-of-type(2n) {
+        width: 100%;
+    }
+
+    .group-qualidade h3 {
+        font-size: 22px;
+        text-align: center;
+        position: static;
+    }
+
+    .group-qualidade:nth-of-type(1) h3 {
+        width: 350px;
+    }
+
+    /* Section Qualidades - FIM */
+
+    /* Section Comentários - INICIO */
+
+    #comentarios-clientes {
+        height: 80rem;
+    }
+
+    #comentarios-clientes > h2 {
+        font-size: 26px;
+        width: 285px;
+        font-weight: 500;
+    }
+
+    #comentarios-clientes > p {
+        font-size: 18px;
+        font-weight: 400;
+        width: 290px;
+        line-height: 30px;
+    }
+
+    .card-comentarios:nth-of-type(1) {
+        transform: scale(0.9) rotate(359deg);
+    }
+
+    .card-comentarios:nth-of-type(4) {
+        transform: scale(0.95) rotate(1deg);
+    }
+
+    .card-comentarios:nth-of-type(3) {
+        transform: scale(0.9) rotate(359deg);
+    }
+    
+    .card-comentarios:nth-of-type(4), .card-comentarios:nth-of-type(5), .card-comentarios:nth-of-type(6) {
+        display: none;
+    }
+
+    /* Section Comentários - FIM */
+
+    /* Section Feedback - INICIO */
+    
+    #feedback {        
+        padding: 0;
+        margin-bottom: 60px;
+    }
+
+    .container-feedback {
+        padding: 40px 10px 0 10px;
+        width: 100vw;
+        align-items: center;
+    }
+
+    .container-feedback h2 {
+        text-align: center;
+        font-size: 26px;
+        width: 284px;
+    }
+
+    .container-feedback h3 {
+        font-size: 23px;
+        width: 310px;
+        text-align: center;
+    }
+
+    .container-feedback a {
+        width: 284px;
+        font-size: 22px;
+        padding: 8px 20px;
+    }
+
+    #link-prop-desktop {
+        display: none;
+    }
+
+    #link-prop-mobile {
+        display: block;
+        padding: 8px 20px;
+    }
+
+    /* Section Feedback  - FIM*/
+
+    /* Footer - INICIO */
+
+    footer {
+        padding: 0;
+    }
+
+    footer > svg {
+        margin: 0 55px;
+        width: 290px;
+    }
+
+    .container-footer {
+        width: 100vw;
+        flex-direction: column;
+    }
+
+    .footer-sm {
+        align-self: flex-start;
+        margin-left: 40px;
+        margin-top: 30px;
+    }
+
+    .logo-footer {
+        width: 100vw;
+    }
+    .logo-footer P {
+        width: 265px;
+    }
+
+    .ellipse {
+        transform: scale(0.8);
+        top: -392px;
+        right: -100px;
+    }
+
+    #creator {
+        display: none;
+    }
+
+    #creator-mobile {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+    }
+
+    #creator-mobile span {
+        display: inline-block;
+        font-family: var(--font-grotesk);
+        position: relative;
+        top: -18px;
+    }
+
+    /* Footer - FIM */
+}
